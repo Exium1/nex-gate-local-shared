@@ -13,7 +13,8 @@
     "registry": "https://npm.pkg.github.com"
   },
   "dependencies": {
-    "@sinclair/typebox": "^0.32.0"
+    "@sinclair/typebox": "^0.32.0",
+    "typebox": "^1.2.18"
   },
   "devDependencies": {
     "typescript": "^5.4.0"
