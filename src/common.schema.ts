@@ -1,4 +1,4 @@
-import { Type, Static, TSchema } from "typebox"
+import { Type, Static, TSchema } from "@sinclair/typebox"
 
 export const UUIDField = Type.String({ format: 'uuid' });
 

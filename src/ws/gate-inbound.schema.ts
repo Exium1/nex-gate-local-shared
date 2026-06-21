@@ -1,14 +1,14 @@
-import { Type, Static } from 'typebox'
+import { Type, Static } from '@sinclair/typebox'
 
-export const GateTriggerMessage = Type.Object({
+export const GateTriggerMessageSchema = Type.Object({
   type: Type.Literal('GATE_TRIGGER'),
-  gate_id: Type.Optional(Type.Integer()),  // only sent in mock mode
+  gate_id: Type.Integer(),
   ts: Type.Integer(),
   beam_x: Type.Integer(),
   beam_y: Type.Integer(),
 })
 
-export type GateTriggerMessage = Static<typeof GateTriggerMessage>
+export type GateTriggerMessage = Static<typeof GateTriggerMessageSchema>
 
-// union this as more inbound types show up:
-// export const GateInboundMessage = Type.Union([GateTriggerMessage, GateHeartbeatMessage, ...])
+export const GateInboundMessageSchema = Type.Union([GateTriggerMessageSchema])
+export type GateInboundMessage = Static<typeof GateInboundMessageSchema>

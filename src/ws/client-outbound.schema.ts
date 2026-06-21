@@ -1,6 +1,7 @@
-import { Type, Static } from 'typebox'
+import { Type, Static } from '@sinclair/typebox'
 import { GateEventSchema } from '../http/gate-event.schema.js'
 import { Nullable } from '../common.schema.js';
+import { CompletedLapSchema } from '../http/lap.schema.js';
 
 export const EnrichedGateEventSchema = Type.Intersect([
   GateEventSchema,
@@ -19,3 +20,6 @@ export const EnrichedGateEventSchema = Type.Intersect([
 ])
 
 export type EnrichedGateEvent = Static<typeof EnrichedGateEventSchema>;
+
+export const ClientOutboundMessageSchema = Type.Union([EnrichedGateEventSchema, CompletedLapSchema]);
+export type ClientoutBoundMessage = Static<typeof ClientOutboundMessageSchema>;

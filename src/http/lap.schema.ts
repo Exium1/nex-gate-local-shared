@@ -1,4 +1,4 @@
-import Type, { Static } from "typebox";
+import Type, { Static } from "@sinclair/typebox";
 import { Nullable, UUIDField } from "../common.schema.js";
 
 export const LapSchema = Type.Object({
@@ -11,3 +11,12 @@ export const LapSchema = Type.Object({
 });
 
 export type Lap = Static<typeof LapSchema>;
+
+export const CompletedLapSchema = Type.Composite([
+  LapSchema,
+  Type.Object({
+    lapDuration: Type.Number()
+  })
+])
+
+export type CompletedLap = Static<typeof CompletedLapSchema>;
