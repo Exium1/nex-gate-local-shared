@@ -1,6 +1,7 @@
 {
   "name": "@exium1/nex-gate-local-shared",
   "version": "1.0.3",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -13,7 +14,8 @@
     "registry": "https://npm.pkg.github.com"
   },
   "dependencies": {
-    "@sinclair/typebox": "^0.34.49"
+    "@sinclair/typebox": "^0.34.49",
+    "uuid": "^14.0.1"
   },
   "devDependencies": {
     "typescript": "^5.9.3"

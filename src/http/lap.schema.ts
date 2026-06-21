@@ -1,4 +1,4 @@
-import Type, { Static } from "@sinclair/typebox";
+import { Static, Type } from "@sinclair/typebox";
 import { Nullable, UUIDField } from "../common.schema.js";
 
 export const LapSchema = Type.Object({
