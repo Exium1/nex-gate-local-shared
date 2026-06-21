@@ -1,0 +1,21 @@
+{
+  "name": "@exium1/nex-gate-local-shared",
+  "version": "1.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "dependencies": {
+    "@sinclair/typebox": "^0.32.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}
